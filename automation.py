@@ -26,7 +26,7 @@ def upload_file(imgName):
     access_token = 'sl.BDEkNcxq9qCeT5YPnpjEDesS3lxXo37vw4TGYExk2JUhCjx8SI_xmKFvk2oY3T8En0nFQhxE0N6QP4awqBOIjy2nAqAYZE9Alb-023wNT5RrIEf9CCL810QAWW4vYuoMp5ham0s'
   
     file_from = imgName
-    file_to = "/SpyCam/"+ imgName 
+    file_to = "/newFolder1/"+ imgName 
   
     dbx = dropbox.Dropbox(access_token)
 
@@ -36,7 +36,7 @@ def upload_file(imgName):
 
 def main():
     while(True):
-        if((time.time()-start_time)>=3):
+        if((time.time()-start_time)>=300):
             snap=take_snapshot()
             upload_file(snap)
 
